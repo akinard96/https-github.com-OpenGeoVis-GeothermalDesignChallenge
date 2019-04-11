@@ -6,9 +6,10 @@
 ./_images/figure-05.png
 ./_images/figure-06.png
 ./_images/team.jpeg
-./_sources/dynamic-portfolio.rst.txt
 ./_sources/index.rst.txt
-./_sources/static-portfolio.rst.txt
+./_sources/portfolio/dynamic.rst.txt
+./_sources/portfolio/index.rst.txt
+./_sources/portfolio/static.rst.txt
 ./_sources/team.rst.txt
 ./_static/basic.css
 ./_static/copy-button.svg
@@ -67,11 +68,12 @@
 ./_static/style.css
 ./_static/underscore-1.3.1.js
 ./_static/underscore.js
-./dynamic-portfolio.html
 ./genindex.html
 ./index.html
 ./objects.inv
+./portfolio/dynamic.html
+./portfolio/index.html
+./portfolio/static.html
 ./search.html
 ./searchindex.js
-./static-portfolio.html
 ./team.html
