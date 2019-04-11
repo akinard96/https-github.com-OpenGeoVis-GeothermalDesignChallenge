@@ -17,7 +17,7 @@ Here we load all the surface data and create `omf.SurfaceElement` objects.
 
 .. code-block:: default
 
-
+    # sphinx_gallery_thumbnail_number = 6
     # Import project package
     import gdc19
 
@@ -302,8 +302,49 @@ land_surface: 'land_surface_vertices.csv'
 
 
 
+
 .. image:: /project/data-aggregation/images/sphx_glr_surfaces_006.png
     :class: sphx-glr-single-img
+
+
+
+
+And now create an OMF project file for the surfaces
+
+
+.. code-block:: default
+
+
+    proj = omf.Project(
+        name='FORGE Surfaces',
+        description='All surfaces for the 2019 FORGE Geothermal Student Competition '
+    )
+
+    proj.elements = [land_surface,
+                     temp_225c,
+                     temp_175c,
+                     opal_mound_fault,
+                     negro_mag_fault,
+                     top_granitoid,
+                    ]
+
+    proj.validate()
+
+
+
+
+
+
+
+Save the GIS project file
+
+
+.. code-block:: default
+
+
+    omf.OMFWriter(proj, gdc19.get_project_path('surfaces.omf'))
+
+
 
 
 
@@ -311,7 +352,7 @@ land_surface: 'land_surface_vertices.csv'
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  59.790 seconds)
+   **Total running time of the script:** ( 1 minutes  17.326 seconds)
 
 
 .. _sphx_glr_download_project_data-aggregation_surfaces.py:

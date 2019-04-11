@@ -5,9 +5,9 @@
 
 Computation times
 =================
-**01:32.594** total execution time for **project_data-aggregation** files:
+**02:25.587** total execution time for **project_data-aggregation** files:
 
-- **00:59.790**: :ref:`sphx_glr_project_data-aggregation_surfaces.py` (``surfaces.py``)
-- **00:31.379**: :ref:`sphx_glr_project_data-aggregation_gis.py` (``gis.py``)
-- **00:01.023**: :ref:`sphx_glr_project_data-aggregation_well_proposed.py` (``well_proposed.py``)
-- **00:00.401**: :ref:`sphx_glr_project_data-aggregation_temperature.py` (``temperature.py``)
+- **01:17.326**: :ref:`sphx_glr_project_data-aggregation_surfaces.py` (``surfaces.py``)
+- **00:35.213**: :ref:`sphx_glr_project_data-aggregation_temperature.py` (``temperature.py``)
+- **00:32.021**: :ref:`sphx_glr_project_data-aggregation_gis.py` (``gis.py``)
+- **00:01.026**: :ref:`sphx_glr_project_data-aggregation_well_proposed.py` (``well_proposed.py``)

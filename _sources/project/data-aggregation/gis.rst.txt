@@ -109,8 +109,44 @@ Load the shape files
 
 
 
+
+
 .. image:: /project/data-aggregation/images/sphx_glr_gis_001.png
     :class: sphx-glr-single-img
+
+
+
+
+Now save out the GIS data to an OMF project file
+
+
+.. code-block:: default
+
+
+    proj = omf.Project(
+        name='FORGE GIS Data',
+        description='All GIS data for the 2019 FORGE Geothermal Student Competition '
+    )
+
+    proj.elements = [ boundary ]
+
+    proj.validate()
+
+
+
+
+
+
+
+Save the GIS project file
+
+
+.. code-block:: default
+
+
+    omf.OMFWriter(proj, gdc19.get_project_path('gis.omf'))
+
+
 
 
 
@@ -118,7 +154,7 @@ Load the shape files
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  31.379 seconds)
+   **Total running time of the script:** ( 0 minutes  32.021 seconds)
 
 
 .. _sphx_glr_download_project_data-aggregation_gis.py:

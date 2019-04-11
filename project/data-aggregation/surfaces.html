@@ -187,7 +187,8 @@
 <p>This notebook aggregates all the surface data for the FORGE site into a single
 Open Mining Format (OMF) project file.</p>
 <p>Here we load all the surface data and create <cite>omf.SurfaceElement</cite> objects.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import project package</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 6</span>
+<span class="c1"># Import project package</span>
 <span class="kn">import</span> <span class="nn">gdc19</span>
 </pre></div>
 </div>
@@ -331,7 +332,28 @@ Open Mining Format (OMF) project file.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_surfaces_006.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_surfaces_006.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  59.790 seconds)</p>
+<p>And now create an OMF project file for the surfaces</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">proj</span> <span class="o">=</span> <span class="n">omf</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;FORGE Surfaces&#39;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;All surfaces for the 2019 FORGE Geothermal Student Competition &#39;</span>
+<span class="p">)</span>
+
+<span class="n">proj</span><span class="o">.</span><span class="n">elements</span> <span class="o">=</span> <span class="p">[</span><span class="n">land_surface</span><span class="p">,</span>
+                 <span class="n">temp_225c</span><span class="p">,</span>
+                 <span class="n">temp_175c</span><span class="p">,</span>
+                 <span class="n">opal_mound_fault</span><span class="p">,</span>
+                 <span class="n">negro_mag_fault</span><span class="p">,</span>
+                 <span class="n">top_granitoid</span><span class="p">,</span>
+                <span class="p">]</span>
+
+<span class="n">proj</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Save the GIS project file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">omf</span><span class="o">.</span><span class="n">OMFWriter</span><span class="p">(</span><span class="n">proj</span><span class="p">,</span> <span class="n">gdc19</span><span class="o">.</span><span class="n">get_project_path</span><span class="p">(</span><span class="s1">&#39;surfaces.omf&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  17.326 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-project-data-aggregation-surfaces-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b1743bd423c0366f525134dade140874/surfaces.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">surfaces.py</span></code></a></p>
