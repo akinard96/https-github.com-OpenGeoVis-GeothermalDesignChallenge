@@ -13,9 +13,7 @@ Proposed Well
 .. code-block:: default
 
 
-    import sys
-    # This makes the gdc19 package avaialble
-    sys.path.append('../../')
+    # Import project package
     import gdc19
 
 
@@ -106,7 +104,7 @@ Depth: 2200 m
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.025 seconds)
+   **Total running time of the script:** ( 0 minutes  1.023 seconds)
 
 
 .. _sphx_glr_download_project_data-aggregation_well_proposed.py:

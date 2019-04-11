@@ -18,9 +18,7 @@ Here we load all the surface data and create `omf.SurfaceElement` objects.
 .. code-block:: default
 
 
-    import sys
-    # This makes the gdc19 package avaialble
-    sys.path.append('../../')
+    # Import project package
     import gdc19
 
 
@@ -313,7 +311,7 @@ land_surface: 'land_surface_vertices.csv'
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  0.882 seconds)
+   **Total running time of the script:** ( 0 minutes  59.790 seconds)
 
 
 .. _sphx_glr_download_project_data-aggregation_surfaces.py:
