@@ -361,7 +361,7 @@ Save the GIS project file
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  18.500 seconds)
+   **Total running time of the script:** ( 1 minutes  15.290 seconds)
 
 
 .. _sphx_glr_download_project_data-aggregation_surfaces.py:
