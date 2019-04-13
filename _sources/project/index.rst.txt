@@ -131,6 +131,26 @@ Visual Inspection
    :hidden:
 
    /project/visual-inspection/inspect-temperature
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This notebook will recreate all of the figures for the competition submission.">
+
+.. only:: html
+
+    .. figure:: /project/visual-inspection/images/thumb/sphx_glr_submission-figures_thumb.png
+
+        :ref:`sphx_glr_project_visual-inspection_submission-figures.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /project/visual-inspection/submission-figures
 .. raw:: html
 
     <div style='clear:both'></div>
