@@ -105,6 +105,38 @@ OMF Data Collection
 
 
 
+.. _sphx_glr_project_visual-inspection:
+
+Visual Inspection
+-----------------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This notebook examines the temperature model and shows off a usefule PVGeo algorithm for rmeove...">
+
+.. only:: html
+
+    .. figure:: /project/visual-inspection/images/thumb/sphx_glr_inspect-temperature_thumb.png
+
+        :ref:`sphx_glr_project_visual-inspection_inspect-temperature.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /project/visual-inspection/inspect-temperature
+.. raw:: html
+
+    <div style='clear:both'></div>
+
+
+
 .. only:: html
 
  .. rst-class:: sphx-glr-signature

@@ -1,0 +1,10 @@
+
+:orphan:
+
+.. _sphx_glr_project_visual-inspection_sg_execution_times:
+
+Computation times
+=================
+**01:19.625** total execution time for **project_visual-inspection** files:
+
+- **01:19.625**: :ref:`sphx_glr_project_visual-inspection_inspect-temperature.py` (``inspect-temperature.py``)

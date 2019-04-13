@@ -115,6 +115,7 @@
 <li class="toctree-l2"><a class="reference internal" href="well_proposed.html">Proposed Well</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#visual-inspection">Visual Inspection</a></li>
 </ul>
 
             
@@ -274,13 +275,15 @@ Values from SGeMS:</p>
 <span class="n">ncx</span><span class="p">,</span> <span class="n">ncy</span><span class="p">,</span> <span class="n">ncz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">dimensions</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
 <span class="n">sx</span><span class="p">,</span> <span class="n">sy</span><span class="p">,</span> <span class="n">sz</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">spacing</span>
 
+
 <span class="n">temp_model</span> <span class="o">=</span> <span class="n">omf</span><span class="o">.</span><span class="n">VolumeElement</span><span class="p">(</span>
         <span class="n">name</span><span class="o">=</span><span class="s1">&#39;kriged_temperature_model&#39;</span><span class="p">,</span>
         <span class="n">description</span><span class="o">=</span><span class="s1">&#39;kriged temoerature model built from temperature probe data&#39;</span><span class="p">,</span>
         <span class="n">geometry</span><span class="o">=</span><span class="n">omf</span><span class="o">.</span><span class="n">VolumeGridGeometry</span><span class="p">(</span>
             <span class="n">tensor_u</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">ncx</span><span class="p">,</span> <span class="n">sx</span><span class="p">),</span>
             <span class="n">tensor_v</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">ncy</span><span class="p">,</span> <span class="n">sy</span><span class="p">),</span>
-            <span class="n">tensor_w</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">ncz</span><span class="p">,</span> <span class="n">sz</span><span class="p">)</span>
+            <span class="n">tensor_w</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">ncz</span><span class="p">,</span> <span class="n">sz</span><span class="p">),</span>
+            <span class="n">origin</span><span class="o">=</span><span class="n">grid</span><span class="o">.</span><span class="n">origin</span><span class="p">,</span>
         <span class="p">),</span>
         <span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">omf</span><span class="o">.</span><span class="n">ScalarData</span><span class="p">(</span>
                 <span class="n">name</span><span class="o">=</span><span class="s1">&#39;temperature (C)&#39;</span><span class="p">,</span>
@@ -296,7 +299,7 @@ Values from SGeMS:</p>
 </pre></div>
 </div>
 <p>And one final sanity check</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">omfvtk</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">temp_model</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">omfvtk</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">temp_model</span><span class="p">)</span><span class="o">.</span><span class="n">clip_box</span><span class="p">(</span><span class="n">gdc19</span><span class="o">.</span><span class="n">get_roi_bounds</span><span class="p">(),</span> <span class="n">invert</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_temperature_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_temperature_004.png" />
@@ -317,7 +320,7 @@ Values from SGeMS:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">omf</span><span class="o">.</span><span class="n">OMFWriter</span><span class="p">(</span><span class="n">proj</span><span class="p">,</span> <span class="n">gdc19</span><span class="o">.</span><span class="n">get_project_path</span><span class="p">(</span><span class="s1">&#39;temperature.omf&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  35.213 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  43.120 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-project-data-aggregation-temperature-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f51404e9ed19f8943d4405b18b1e8d79/temperature.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">temperature.py</span></code></a></p>

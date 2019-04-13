@@ -110,6 +110,7 @@
 <li class="toctree-l2"><a class="reference internal" href="well_proposed.html">Proposed Well</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#visual-inspection">Visual Inspection</a></li>
 </ul>
 
             
@@ -258,6 +259,11 @@ Open Mining Format (OMF) project file.</p>
     <span class="s1">&#39;temp_175c&#39;</span><span class="p">,</span>
     <span class="n">description</span>
     <span class="p">)</span>
+<span class="n">temp_175c</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">omf</span><span class="o">.</span><span class="n">ScalarData</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;constant temperature value of 175 for surface&#39;</span><span class="p">,</span>
+            <span class="n">array</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">temp_175c</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">num_nodes</span><span class="p">,</span> <span class="mf">175.</span><span class="p">),</span>
+            <span class="n">location</span><span class="o">=</span><span class="s1">&#39;vertices&#39;</span><span class="p">),]</span>
 <span class="n">temp_175c</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -276,6 +282,11 @@ Open Mining Format (OMF) project file.</p>
     <span class="s1">&#39;temp_225c&#39;</span><span class="p">,</span>
     <span class="n">description</span>
     <span class="p">)</span>
+<span class="n">temp_225c</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">omf</span><span class="o">.</span><span class="n">ScalarData</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;constant temperature value of 225 for surface&#39;</span><span class="p">,</span>
+            <span class="n">array</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">temp_225c</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">num_nodes</span><span class="p">,</span> <span class="mf">225.</span><span class="p">),</span>
+            <span class="n">location</span><span class="o">=</span><span class="s1">&#39;vertices&#39;</span><span class="p">),]</span>
 <span class="n">temp_225c</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -353,7 +364,7 @@ Open Mining Format (OMF) project file.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">omf</span><span class="o">.</span><span class="n">OMFWriter</span><span class="p">(</span><span class="n">proj</span><span class="p">,</span> <span class="n">gdc19</span><span class="o">.</span><span class="n">get_project_path</span><span class="p">(</span><span class="s1">&#39;surfaces.omf&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  17.326 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  18.488 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-project-data-aggregation-surfaces-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b1743bd423c0366f525134dade140874/surfaces.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">surfaces.py</span></code></a></p>
