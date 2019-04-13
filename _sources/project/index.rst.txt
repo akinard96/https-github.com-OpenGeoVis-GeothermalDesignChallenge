@@ -4,6 +4,9 @@
 
 .. _sphx_glr_project:
 
+Reproducible Project
+********************
+
 Here is a gallery of our project's workflow.
 
 
