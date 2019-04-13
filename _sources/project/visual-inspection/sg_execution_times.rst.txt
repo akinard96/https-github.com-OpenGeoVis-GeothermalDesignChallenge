@@ -5,7 +5,7 @@
 
 Computation times
 =================
-**03:50.705** total execution time for **project_visual-inspection** files:
+**03:47.157** total execution time for **project_visual-inspection** files:
 
-- **02:31.768**: :ref:`sphx_glr_project_visual-inspection_submission-figures.py` (``submission-figures.py``)
-- **01:18.937**: :ref:`sphx_glr_project_visual-inspection_inspect-temperature.py` (``inspect-temperature.py``)
+- **02:28.696**: :ref:`sphx_glr_project_visual-inspection_submission-figures.py` (``submission-figures.py``)
+- **01:18.461**: :ref:`sphx_glr_project_visual-inspection_inspect-temperature.py` (``inspect-temperature.py``)
