@@ -141,7 +141,7 @@ surface - :class:`PVGeo.grids.ExtractTopography`
     granitoid = PVGeo.grids.ExtractTopography(
                     remove=True, # remove the inactive cells
                     tolerance=10.0 # buffer around the topo surface
-                ).Apply(granitoid, topo)
+                ).apply(granitoid, topo)
 
     p = vtki.Plotter()
     p.add_mesh(topo)
@@ -212,7 +212,7 @@ domain:
     temp_grid_no_topo = PVGeo.grids.ExtractTopography(
                     remove=True, # remove the inactive cells
                     tolerance=10.0 # buffer around the topo surface
-                   ).Apply(temp_grid_cropped, topo)
+                   ).apply(temp_grid_cropped, topo)
 
     temp_grid_no_topo.plot(**temp_kwargs)
 
@@ -296,7 +296,7 @@ plume is in relation to the FRGE site
 
 
     boundary = gis_data['boundary']
-    boundary_tube = PVGeo.filters.AddCellConnToPoints(cellConn=4).Apply(boundary).tube(radius=30)
+    boundary_tube = PVGeo.filters.AddCellConnToPoints(cell_type=4).apply(boundary).tube(radius=30)
 
     p = vtki.Plotter()
     p.add_mesh(topo, opacity=0.7)
@@ -316,7 +316,7 @@ plume is in relation to the FRGE site
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  20.362 seconds)
+   **Total running time of the script:** ( 1 minutes  17.678 seconds)
 
 
 .. _sphx_glr_download_project_visual-inspection_inspect-temperature.py:

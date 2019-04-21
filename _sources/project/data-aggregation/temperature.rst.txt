@@ -115,8 +115,8 @@ Load the kriged temperature model
     fvar = gdc19.get_krig_path("Geotherm_kriged_0_krig_var.sgems")
 
     # Read the kirgged model and variance
-    grid = PVGeo.gslib.SGeMSGridReader().Apply(fkrig)
-    grid_var = PVGeo.gslib.SGeMSGridReader().Apply(fvar)
+    grid = PVGeo.gslib.SGeMSGridReader().apply(fkrig)
+    grid_var = PVGeo.gslib.SGeMSGridReader().apply(fvar)
 
     # Label the array appropriately
     grid.rename_scalar('Getherm_kriged_0', 'Temperature')
@@ -264,7 +264,7 @@ Save the temperature project file
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  43.059 seconds)
+   **Total running time of the script:** ( 0 minutes  42.112 seconds)
 
 
 .. _sphx_glr_download_project_data-aggregation_temperature.py:
