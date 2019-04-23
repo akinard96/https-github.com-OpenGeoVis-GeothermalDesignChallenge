@@ -241,7 +241,8 @@
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">boundary</span> <span class="o">=</span> <span class="n">gis_data</span><span class="p">[</span><span class="s1">&#39;boundary&#39;</span><span class="p">]</span>
-<span class="n">boundary_tube</span> <span class="o">=</span> <span class="n">PVGeo</span><span class="o">.</span><span class="n">filters</span><span class="o">.</span><span class="n">AddCellConnToPoints</span><span class="p">(</span><span class="n">cell_type</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">boundary</span><span class="p">)</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">boundary_tube</span> <span class="o">=</span> <span class="n">PVGeo</span><span class="o">.</span><span class="n">filters</span><span class="o">.</span><span class="n">AddCellConnToPoints</span><span class="p">(</span><span class="n">cell_type</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                        <span class="n">close_loop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">boundary</span><span class="p">)</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 <span class="n">walls</span> <span class="o">=</span> <span class="n">PVGeo</span><span class="o">.</span><span class="n">filters</span><span class="o">.</span><span class="n">BuildSurfaceFromPoints</span><span class="p">(</span>
                 <span class="n">zcoords</span><span class="o">=</span><span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">4.5e3</span><span class="p">])</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">boundary</span><span class="p">)</span>
 </pre></div>
@@ -620,7 +621,7 @@
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_submission-figures_006.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_submission-figures_006.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  32.381 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  28.476 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-project-visual-inspection-submission-figures-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/828a43247ed8266a0f3f943ccc1fa421/submission-figures.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">submission-figures.py</span></code></a></p>

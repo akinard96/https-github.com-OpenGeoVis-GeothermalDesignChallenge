@@ -319,7 +319,8 @@ domain:</p>
 <p>Now lets put this all together to gain insight on where that temperature
 plume is in relation to the FRGE site</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">boundary</span> <span class="o">=</span> <span class="n">gis_data</span><span class="p">[</span><span class="s1">&#39;boundary&#39;</span><span class="p">]</span>
-<span class="n">boundary_tube</span> <span class="o">=</span> <span class="n">PVGeo</span><span class="o">.</span><span class="n">filters</span><span class="o">.</span><span class="n">AddCellConnToPoints</span><span class="p">(</span><span class="n">cell_type</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">boundary</span><span class="p">)</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">boundary_tube</span> <span class="o">=</span> <span class="n">PVGeo</span><span class="o">.</span><span class="n">filters</span><span class="o">.</span><span class="n">AddCellConnToPoints</span><span class="p">(</span><span class="n">cell_type</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                    <span class="n">close_loop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">boundary</span><span class="p">)</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">topo</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
@@ -330,7 +331,7 @@ plume is in relation to the FRGE site</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_inspect-temperature_007.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_inspect-temperature_007.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  18.342 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  17.049 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-project-visual-inspection-inspect-temperature-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/24a2b4230906bc9b7cd7a0274d91734c/inspect-temperature.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">inspect-temperature.py</span></code></a></p>
