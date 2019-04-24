@@ -317,7 +317,7 @@ plume is in relation to the FRGE site
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  14.267 seconds)
+   **Total running time of the script:** ( 1 minutes  16.859 seconds)
 
 
 .. _sphx_glr_download_project_visual-inspection_inspect-temperature.py:
